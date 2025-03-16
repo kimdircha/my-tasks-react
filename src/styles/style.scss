@@ -1,0 +1,63 @@
+$primary: #6C63FF;
+
+@import 'bootstrap/scss/bootstrap.scss';
+
+body {
+    font-family: "Kanit", sans-serif;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active {
+    color: white !important;
+}
+
+.todos .form-check {
+    flex-grow: 1;
+}
+
+.todos label {
+    cursor: pointer;
+    width: 100%;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+.todos .form-check-input:checked + label {
+    text-decoration-line: line-through;
+    text-decoration-thickness: 2px;
+}
+
+.main-btn {
+    flex-grow: 1;
+}
+
+svg[aria-expanded=false] .arrow-up {
+    display: none;
+}
+
+svg[aria-expanded=true] .arrow-down {
+    display: none;
+}
+
+#description {
+    height: 120px;
+}
+
+.task-title {
+    display: inline-block;
+    width: 260px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: inherit;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.unactive-task {
+    cursor: not-allowed;
+    * {
+        pointer-events: none;
+    }
+}
