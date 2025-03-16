@@ -29,8 +29,9 @@ function App() {
   function handleToggleTask(taskId: number): void {
     const taskIndex = tasks.findIndex((t) => t.id === taskId);
     if (taskIndex !== -1) {
-      tasks[taskIndex].completed = !tasks[taskIndex].completed;
-      setTasks([...tasks]);
+      const updatedTasks = [...tasks];
+      updatedTasks[taskIndex].completed = !updatedTasks[taskIndex].completed;
+      setTasks(updatedTasks);
     }
   }
   function deleteTask(taskId: number): void {
